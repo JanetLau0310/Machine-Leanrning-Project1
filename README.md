@@ -59,3 +59,21 @@ This and the following method is an initial way to extend the data set. But I fo
 
 __2.2.7 Extend with Square and Cube. X = [ X , X², X³]__<br>
 idea is the same as writen before.
+
+### 2.3 Result
+__2.3.1 Show the ROC Curve, Coefficient plot and image.__
+__2.3.2 Comparison Form ( Base on error rate of test data)__
+
+
+
+Preprocessing\Standardization | 01-Standardization | Scalar Standardization<br>(with_std = False) | Result with different C <br>after Scalar Standardization
+------------- | ------------- | ------------- | -------------
+Histogram information | X = [01,x_hist]<br> Error Rate: 0.03300<br> C=0.5<br> Error Rate: 0.03200 | X = [scaler,x_hist]<br> Error Rate: 0.04049| X = [scaler,x_hist]<br> C = 0.316 <br>Error Rate: 0.03649
+| Counting Maximun | X = [01,x_max]<br>Error Rate: 0.04749<br> X = [original,x_max]<br>Error Rate: 0.04749  | X = [scaler,x_max]<br> C = 0.5<br>Error Rate: 0.04449 | X = [scaler,x_hist]<br>C = 0.5<br> Error Rate: 0.03600
+| Counting Average | X = [01,x_max]<br> Error Rate: 0.04149<br> X = [original,x_max]<br>Error Rate: 0.04149 | X = [scaler,x_avg]<br>C = 0.5<br>Error Rate: 0.03749 | X = [scaler,x_hist]<br>C = 0.75<br>Error Rate: 0.03749999999999998
+| Counting the Square | X = [original,x_square]<br> Error Rate: 0.0410 | X = [scaler,x_square]<br> Error Rate: 0.04149 | X = [scaler,x_hist]<br> C = 0.9<br>Error Rate: 0.03949
+| Counting the Cube | X = [original,x_square,x_cube]<br>Error Rate: 0.04049 | | X = [scaler,x_hist] <br>C = 1<br>Error Rate: 0.04449
+
+Note: if not mention, the paramter C is by defult.
+
+
